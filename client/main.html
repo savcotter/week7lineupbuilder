@@ -1,37 +1,15 @@
 <head>
-  <title>lubuilder</title>
+	<title>Lineupbuilder!</title>
 </head>
 
 <body>
-	{{> tMainApp}}
-</body>
-<template name="tMainApp">
 	<div class="container">
-<h1>LineUpBuilder!</h1>
-        <div class="field">
-            <div class="player">
-        		<button type="button" class="btn btn-default btn-lg player-edit">
- 				<span class="glyphicon glyphicon-user"></span>Left Striker
-				</button>
-
-				{{#if sPlayerEdit}}
-				<input type="text" class="first-name">
-			    <button type="button" class="btn btn-success btn-xs player-add">
-			  		<span class="glyphicon glyphicon-ok"></span>
-				</button>
-				<button type="button" class="btn btn-danger btn-xs player-remove">
-			  		<span class="glyphicon glyphicon-remove"></span>
-				</button>
-                {{/if}}
-
-            </div> <!-- END .player -->
-        </div> <!-- END .field -->
-        <div class="virtual-field">
-        	<ul>
-        		{{#each players}}
-        		<li>{{firstName}}<span class="glyphicon glyphicon-remove remove-name"></span></li>
-        		{{/each}}
-        	</ul>
-        </div>
-    </div> <!-- END .container -->
-</template>
+		<h1>LineUpBuilder!</h1>
+		<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+			{{> tAddPlayer}}
+		</div> <!-- END first column -->
+		<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+			<p>field will go here</p>
+		</div><!-- END second column -->
+	</div> <!-- END .container -->
+</body>
