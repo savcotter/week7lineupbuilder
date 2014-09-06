@@ -1,9 +1,10 @@
-<template name="field">
+<template name="tField">
 	<div class="field">
-        	<ul>
-        		{{#each players}}
-        		<li>{{firstName}}<span class="glyphicon glyphicon-remove remove-name"></span></li>
-        		{{/each}}
-        	</ul>
-        </div>
+        {{#each cPlayers}}
+        	<div class="{{fieldPosition}}">
+        		{{firstName}}
+        	<span class="glyphicon glyphicon-remove remove-name"></span>
+        	</div>
+        	{{/each}}
+        </div> <!-- END .field -->
 </template>
